@@ -7,7 +7,7 @@ const Banner = () => {
     const slideButtonStyle = "absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0";
 
 
-    const slideTextStyle = "bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] flex items-center absolute h-full  left-0 top-0";
+    const slideTextStyle = " bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] flex items-center absolute rounded-xl h-full  left-0 top-0";
     return (
         <div className="carousel w-full h-[600px]">
   <div id="slide1" className="carousel-item relative w-full">
