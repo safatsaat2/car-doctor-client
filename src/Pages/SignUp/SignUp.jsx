@@ -19,6 +19,8 @@ const SignUp = () => {
         .then(result =>{
             const user = result.user;
             console.log(user)
+            alert('signed up')
+            form.reset()
         })
         .then(err =>{
             console.log(err)

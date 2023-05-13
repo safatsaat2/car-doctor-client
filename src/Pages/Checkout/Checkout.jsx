@@ -35,6 +35,7 @@ const Checkout = () => {
             console.log(data);
             if(data.insertedId){
                 alert("added successfully")
+                form.reset()
             }
         })
     }
