@@ -14,9 +14,8 @@ const Banner = () => {
     <img src={img1} className="w-full rounded-xl" />
     <div className={slideTextStyle}>
       <div className='text-white space-y-7 pl-12 w-1/2'>
-        <h2 className='text-6xl font-bold '>Affordable Price For Car Servicing</h2>
+        <h2 className='text-6xl font-bold'>Affordable Price For Car Servicing</h2>
         <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
-
       <div>
         <button className='btn btn-primary mr-5'>Discover More</button>
         <button className='btn btn-outline btn-secondary'>Latest Project</button>
