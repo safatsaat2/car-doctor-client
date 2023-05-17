@@ -10,7 +10,6 @@ const LogIn = () => {
     const {signIn} = useContext(AuthContext);
     const location = useLocation();
     const from = location.state?.from?.pathname || '/'
-    console.log(from)
 
 
    const  handleLogin = event =>{
@@ -23,7 +22,27 @@ const LogIn = () => {
         .then(res => {
             const user = res.user;
             console.log(user);
-            navigate(from, {replace: true})
+            
+            const loggedUser = {
+                email: user.email
+            }
+            console.log(loggedUser)
+            fetch('http://localhost:5000/jwt', {
+                method: "POST",
+                headers: {
+                    'content-type' : 'application/json'
+                },
+                body: JSON.stringify(loggedUser)
+            })
+            .then(res => res.json())
+            .then(data =>  {
+                console.log('jwt res',data)
+
+                // Warning: Local storage is not the best (second best place)
+                localStorage.setItem('car-access-token', data.token);
+                navigate(from, {replace: true})
+
+            })
         })
         .catch(err =>{
             console.log(err)
